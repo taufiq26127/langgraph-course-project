@@ -65,6 +65,51 @@ Dependency utama dapat dilihat di:
 
 Fokus utama portofolio ini adalah menunjukkan pemahaman pola orkestrasi agentic workflow pada LangGraph, dari alur sederhana hingga workflow dinamis dan persisten.
 
+## Gambar Workflow
+
+### 1) Linear Workflow (BMI)
+```mermaid
+flowchart LR
+    A([START]) --> B[convert_bmi]
+    B --> C[label_bmi]
+    C --> D([END])
+```
+
+### 2) Parallel Workflow (Employee Summary)
+```mermaid
+flowchart LR
+    A([START]) --> B[Calculate Yearly Salary]
+    A --> C[Calculate Bonus]
+    A --> E[Project Status]
+    B --> F[Summary]
+    C --> F
+    E --> F
+    F --> G([END])
+```
+
+### 3) Conditional Workflow (Email Routing)
+```mermaid
+flowchart LR
+    A([START]) --> B[format_email]
+    B --> C[analyze_email]
+    C -->|approved| D[approve_email]
+    C -->|review| E[review_email]
+    C -->|rejected| F[reject_email]
+    D --> G([END])
+    E --> G
+    F --> G
+```
+
+### 4) Iterative Workflow (Generate-Evaluate-Optimize)
+```mermaid
+flowchart LR
+    A([START]) --> B[generate]
+    B --> C[evaluate]
+    C -->|approved| D([END])
+    C -->|needs_improvement| E[optimize]
+    E --> C
+```
+
 ## Sumber Belajar
 
 Saya mempelajari materi utama implementasi ini dari YouTube:
