@@ -48,19 +48,6 @@ Implementasi menggunakan **LangGraph + LangChain** dengan model lokal via **Olla
 - Pydantic
 - Jupyter Notebook
 
-Dependency utama dapat dilihat di:
-- [pyproject.toml](/C:/Belajar/langgraph-course/pyproject.toml)
-- [requirements.txt](/C:/Belajar/langgraph-course/requirements.txt)
-
-## Cara Menjalankan
-
-1. Install dependency:
-   - `uv sync` atau `pip install -r requirements.txt`
-2. Jalankan Ollama dan pastikan model tersedia:
-   - `ollama pull llama3.2:3b`
-3. Buka notebook di folder [2_workflow/](/C:/Belajar/langgraph-course/2_workflow) menggunakan Jupyter/VS Code.
-4. Eksekusi cell per notebook untuk melihat alur graph, visualisasi, dan hasil inferensi.
-
 ## Catatan Portofolio
 
 Fokus utama portofolio ini adalah menunjukkan pemahaman pola orkestrasi agentic workflow pada LangGraph, dari alur sederhana hingga workflow dinamis dan persisten.
@@ -69,7 +56,7 @@ Fokus utama portofolio ini adalah menunjukkan pemahaman pola orkestrasi agentic 
 
 ### 1) Linear Workflow (BMI)
 ```mermaid
-flowchart LR
+flowchart TD
     A([START]) --> B[convert_bmi]
     B --> C[label_bmi]
     C --> D([END])
