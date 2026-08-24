@@ -102,7 +102,7 @@ flowchart LR
 
 ### 4) Iterative Workflow (Generate-Evaluate-Optimize)
 ```mermaid
-flowchart LR
+flowchart TB
     A([START]) --> B[generate]
     B --> C[evaluate]
     C -->|approved| D([END])
